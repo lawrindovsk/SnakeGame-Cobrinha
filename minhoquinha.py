@@ -3,11 +3,13 @@
 import pygame, random
 from pygame.locals import *
 
+
 #Método Grid Random
 def on_grid_random():
     x = random.randint(0,590)
     y = random.randint(0,590)
     return (x//10 * 10, y//10 * 10)
+
 
 #Método de colisão.
 def collision(c1, c2):
@@ -23,7 +25,7 @@ LEFT = 3
 #Tela do jogo e nome.
 pygame.init()
 screen = pygame.display.set_mode((600,600))
-pygame.display.set_caption('Snake Game by Gustavo Laurindo (lawrindovsk')
+pygame.display.set_caption('Snake Game by Gustavo Laurindo (lawrindovsk)')
 ####################################################
 #Criando a snake/minhoca/cobra
 snake = [(200, 200), (210, 200), (220,200)]
@@ -75,6 +77,7 @@ while True:
     screen.fill((0, 0, 0))
     screen.blit(apple, apple_pos)
     for pos in snake:
-        screen.blit(snake_skin,pos)
+        screen.blit(snake_skin, pos)
+
 
     pygame.display.update()
